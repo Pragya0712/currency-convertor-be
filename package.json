@@ -1,16 +1,23 @@
 {
-  "name": "currency-covertor-be",
-  "version": "1.0.0",
-  "description": "currency convertor backend",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Pragya Patel",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^1.6.3",
-    "cors": "^2.8.5",
-    "express": "^4.18.2"
-  }
+	"name": "currency-covertor-be",
+	"version": "1.0.0",
+	"description": "currency convertor backend",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon server.js env=dev",
+		"dev": "node server.js"
+	},
+	"author": "Pragya Patel",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^1.6.3",
+		"cors": "^2.8.5",
+		"dotenv": "^16.3.1",
+		"express": "^4.18.2",
+		"nconf": "^0.12.1"
+	},
+	"devDependencies": {
+		"nodemon": "^3.0.2"
+	}
 }

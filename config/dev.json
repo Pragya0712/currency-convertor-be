@@ -1,0 +1,6 @@
+{
+	"env": "dev",
+	"port": "4000",
+	"coin_market_base_url": "https://pro-api.coinmarketcap.com",
+	"coin_market_api_key": "1af8c0ca-5a60-4ec6-8f68-8c36091321f1"
+}
