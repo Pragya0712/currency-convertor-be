@@ -9,7 +9,10 @@ exports.listAllCryptos = async (req, res) => {
 
 exports.listAllCurrencies = async (req, res) => {
 	const response = await interactions.currencyListing();
-	// console.log(response);
 	const cryptoList = response.data;
 	return cryptoList;
+};
+
+exports.convertor = async (req, res) => {
+	//
 };
