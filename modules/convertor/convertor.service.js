@@ -6,3 +6,10 @@ exports.listAllCryptos = async (req, res) => {
 	const cryptoList = response.data;
 	return cryptoList;
 };
+
+exports.listAllCurrencies = async (req, res) => {
+	const response = await interactions.currencyListing();
+	// console.log(response);
+	const cryptoList = response.data;
+	return cryptoList;
+};

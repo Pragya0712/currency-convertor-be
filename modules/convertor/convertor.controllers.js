@@ -10,3 +10,11 @@ exports.listAllCryptos = async (req, res) => {
 		res.status(err.status).send(err.data);
 	}
 };
+exports.listAllCurrencies = async (req, res) => {
+	try {
+		const response = await service.listAllCurrencies();
+		res.status(200).json({ msg: "List of all currencies", data: response });
+	} catch (err) {
+		res.status(err.status).send(err.data);
+	}
+};

@@ -1,9 +1,9 @@
-const controller = require("./convertor.controllers");
-
 module.exports = (app) => {
 	let router = require("express").Router();
+	const controller = require("./convertor.controllers");
 
-	router.get("/", controller.listAllCryptos);
+	router.get("/", controller.listAllCurrencies);
+	router.get("/crypto", controller.listAllCryptos);
 
-	app.use("/api/v1/convertor", router);
+	app.use("/api/v1/currencies", router);
 };
