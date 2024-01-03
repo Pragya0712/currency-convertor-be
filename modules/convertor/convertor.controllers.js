@@ -22,19 +22,19 @@ exports.listAllCurrencies = async (req, res) => {
 
 exports.convertor = async (req, res) => {
 	try {
-		const obj = {
-			id: req.query.currency_id,
-			amount: req.query.amount,
-			symbol: req.query.crypto_symbol,
-		};
-
 		const errors = validationResult(req);
 		if (!errors.isEmpty()) {
 			return res.status(400).json({ errors: errors.array() });
 		}
 
+		const obj = {
+			id: req.query.currency_id,
+			amount: req.query.amount,
+			symbol: req.query.crypto_symbol.toUpperCase(),
+		};
+
 		const response = await service.convertor(obj);
-		res.status(200).json({ msg: "List of all currencies", data: response });
+		res.status(200).json({ msg: "Converted price results", data: response });
 	} catch (err) {
 		res.status(err.status).json({ errors: err.data });
 	}

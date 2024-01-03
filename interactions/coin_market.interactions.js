@@ -44,3 +44,25 @@ exports.currencyListing = async () => {
 		};
 	}
 };
+
+exports.priceConversion = async (symbol, amount, id) => {
+	try {
+		const response = await axios.get(
+			`${base_url}/v2/tools/price-conversion?convert=${symbol}&amount=${amount}&id=${id}`,
+			{
+				headers: {
+					"X-CMC_PRO_API_KEY": `${API_KEY}`,
+					Accept: "*/*",
+				},
+			}
+		);
+		const json = response.data;
+		return json;
+	} catch (err) {
+		throw {
+			data: err.response.data,
+			status: err.response.status,
+			statusText: err.response.statusText,
+		};
+	}
+};
