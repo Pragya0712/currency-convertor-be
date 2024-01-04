@@ -136,3 +136,7 @@ dist
 
 # Dev environment files
 .gitpod.yml
+
+#config file
+config/dev.json
+
