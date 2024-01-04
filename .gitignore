@@ -138,5 +138,5 @@ dist
 .gitpod.yml
 
 #config file
-config/dev.json
+# config
 

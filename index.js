@@ -10,6 +10,8 @@ app.use(cors());
 
 require("./modules/convertor/convertor.routes")(app);
 
-app.listen(nconf.get("port"), () => {
-	console.log(`Server is up and running on port ${nconf.get("port")}`);
+app.listen(process.env.PORT || nconf.get("port"), () => {
+	console.log(
+		`Server is up and running on port ${process.env.PORT || nconf.get("port")}`
+	);
 });
