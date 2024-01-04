@@ -5,8 +5,8 @@ module.exports = (app) => {
 
 	router.get("/", controller.listAllCurrencies);
 	router.get("/crypto", controller.listAllCryptos);
-	router.post(
-		"/crypto",
+	router.get(
+		"/conversion",
 		[
 			query("currency_id", "currency_id is missing").notEmpty(),
 			query("amount", "amount is missing").notEmpty(),

@@ -21,9 +21,9 @@ exports.convertor = async (obj) => {
 		defaultAmount,
 		id
 	);
-	const conversionData = response.data;
-	const currency_symbol = conversionData.symbol;
-	const price = conversionData?.quote[symbol]?.price;
+	const conversion_data = response.data;
+	const currency_symbol = conversion_data.symbol;
+	const price = conversion_data?.quote[symbol]?.price;
 	if (!price) {
 		throw {
 			data: `Invalid input values`,
@@ -31,11 +31,11 @@ exports.convertor = async (obj) => {
 		};
 	}
 
-	const convertedPrice = amount / price;
+	const converted_price = amount / price;
 	return {
 		currency_id: id,
 		currency_symbol,
 		crypto_symbol: symbol,
-		convertedPrice,
+		amount: converted_price,
 	};
 };

@@ -4,7 +4,7 @@
 	"description": "currency convertor backend",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "jest --watch --verbose",
 		"start": "nodemon server.js env=dev",
 		"dev": "node server.js"
 	},
@@ -19,6 +19,7 @@
 		"nconf": "^0.12.1"
 	},
 	"devDependencies": {
+		"jest": "^29.7.0",
 		"nodemon": "^3.0.2"
 	}
 }
